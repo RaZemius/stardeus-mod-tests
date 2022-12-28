@@ -65,14 +65,14 @@ namespace ExampleMod.Systems {
         private void OnLoadSave(GameState state) {
             this.state = state;
             S.Clock.OnTick.AddListener(OnTick);
-            UIPopupWidget.Spawn(IconId.CWarning, "warning".T(),
+            UIPopupWidget.Spawn(IconId.CWarning, "warning",
                 "Note for mod developer. ExampleModSys should be removed from your mod");
         }
 
         // If your system depends on AreasSys, for example, you may want to
         // start ticking your system only after initial areas have been built
         private void OnAreasInit() {
-            S.Clock.OnTickAsync.AddListener(OnTickAsync);
+            S.Clock.OnTick.AddListener(OnTick);
         }
 
         // OnTickAsync should be prefered over this
