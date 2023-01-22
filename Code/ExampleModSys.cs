@@ -20,7 +20,6 @@ namespace ExampleMod.Systems {
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         private static void Register() {
             GameSystems.Register(SysId, () => new ExampleModSys());
-            D.Warn("sys init");
         }
 
         // If your system adds some mechanic that may not be compatible with

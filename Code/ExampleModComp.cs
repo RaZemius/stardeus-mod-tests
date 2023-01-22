@@ -5,6 +5,7 @@ using Game.Constants;
 using Game.Data;
 using Game.Utils;
 using UnityEngine;
+using KL.Utils;
 
 namespace ExampleMod.Components {
     // WARNING Don't forget to replace BaseComponent<ExampleModComp>

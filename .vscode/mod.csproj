@@ -13,7 +13,7 @@
 
         <!-- Modify [RootNamespace], [AssemblyName], [OutputPath], [VersionPrefix] -->
         <RootNamespace>Game.ExampleMod</RootNamespace>
-        <AssemblyName>Stardeus_Mod_Template</AssemblyName>
+        <AssemblyName>mod_tests</AssemblyName>
         <OutputPath>../Libraries</OutputPath>
         <VersionPrefix>1.0.0.0</VersionPrefix>
 
