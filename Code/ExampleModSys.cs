@@ -20,6 +20,7 @@ namespace ExampleMod.Systems {
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         private static void Register() {
             GameSystems.Register(SysId, () => new ExampleModSys());
+            D.Warn("sys init");
         }
 
         // If your system adds some mechanic that may not be compatible with
@@ -50,11 +51,12 @@ namespace ExampleMod.Systems {
             S.Sig.AfterLoadState.AddListener(OnLoadSave);
             S.Sig.AreasInitialized.AddListener(OnAreasInit);
             S.Sig.ToggleOverlay.AddListener(OnToggleOverlay);
+            D.Warn("mod online");
         }
 
         // You will have to create Graphics/Icons/White/ExampleModIcon.png
         private readonly OverlayInfo overlayInfo = new OverlayInfo(20, SysId,
-            "Icons/White/ExampleModIcon");
+            "Graphics/White/ExampleModIcon");
 
         private void OnToggleOverlay(OverlayInfo info, bool on) {
             D.Err("Toggling overlay: {0} -> {1}", info.Id, on);
