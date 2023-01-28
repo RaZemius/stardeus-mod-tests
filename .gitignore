@@ -9,6 +9,7 @@ Artwork/*.blend3
 Artwork/*.blend4
 Artwork/*.blend5
 Libraries/*.json
+Libraries/*.dll
 
 .vscode/obj/
 obj/
