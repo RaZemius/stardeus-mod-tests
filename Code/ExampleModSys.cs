@@ -26,7 +26,7 @@ namespace ExampleMod.Systems {
         // old saves, you have to set the MinRequiredVersion
         //public override string MinRequiredVersion => "0.6.89";
 
-        private GameState state;
+        //private GameState state;
 
         // By returning something in the Overlays list, your system can add
         // buttons in the top right section of the game UI.
@@ -47,7 +47,7 @@ namespace ExampleMod.Systems {
             overlays.Add(overlayInfo);
             ui = new ExampleOverlayUI(this);
 
-            S.Sig.AfterLoadState.AddListener(OnLoadSave);
+            //S.Sig.AfterLoadState.AddListener(OnLoadSave);
             S.Sig.AreasInitialized.AddListener(OnAreasInit);
             S.Sig.ToggleOverlay.AddListener(OnToggleOverlay);
             D.Warn("mod online");
@@ -66,12 +66,6 @@ namespace ExampleMod.Systems {
             }
         }
 
-        private void OnLoadSave(GameState state) {
-            this.state = state;
-            S.Clock.OnTick.AddListener(OnTick);
-            UIPopupWidget.Spawn(IconId.CWarning, "warning".T(),
-                "Note for mod developer. ExampleModSys should be removed from your mod");
-        }
 
         // If your system depends on AreasSys, for example, you may want to
         // start ticking your system only after initial areas have been built

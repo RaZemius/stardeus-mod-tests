@@ -1,5 +1,5 @@
 {
-    "ToolPath" : "Devices/Facilities",
+    "ToolPath" : "Facilities",
     "Layer" : "Objects",
     "ParentId" : "Objects/Devices/BaseDevice",
     "Researchable" : {

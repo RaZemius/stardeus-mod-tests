@@ -13,3 +13,4 @@ Libraries/*.dll
 
 .vscode/obj/
 obj/
+Libraries/mod_tests.dll
